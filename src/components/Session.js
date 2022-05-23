@@ -18,6 +18,8 @@ export default function Session({ weekday, date, showtimes }) {
   );
 }
 
+//Styles
+
 const Sessions = styled.div`
   margin-bottom: 25px;
 

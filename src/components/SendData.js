@@ -40,6 +40,8 @@ export default function SendData(props) {
   }
 }
 
+//Styles
+
 const Button = styled.div`
   width: 100%;
   display: flex;

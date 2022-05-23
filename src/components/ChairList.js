@@ -33,6 +33,8 @@ export default function ChairList(props) {
   ));
 }
 
+//Styles
+
 const Chair = styled.div`
   width: 26px;
   height: 26px;

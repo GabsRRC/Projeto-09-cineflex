@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import styled from "styled-components";
-
 import ChairList from "./ChairList";
 import UserData from "./UserData";
 import SendData from "./SendData";
@@ -55,6 +54,8 @@ export default function ChairsContainer(props) {
     </>
   );
 }
+
+//Styles
 
 const Container = styled.div`
   width: 375px;

@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { React, useEffect, useState } from "react";
 import styled from "styled-components";
 import arrow from "../img/arrow-undo.svg"
-
 import ChairsContainer from "./ChairsContainer";
 
 export default function AllChairs(props) {
@@ -44,6 +43,8 @@ export default function AllChairs(props) {
     </>
   );
 }
+
+//Styles
 
 const Container = styled.div`
   font-family: "Roboto", sans-serif;

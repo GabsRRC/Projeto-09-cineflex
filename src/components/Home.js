@@ -1,9 +1,7 @@
-//import React from "react"
 import axios from "axios";
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-//import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 export default function Home() {
   const [images, setImages] = useState([]);

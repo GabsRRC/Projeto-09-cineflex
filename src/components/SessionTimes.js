@@ -103,6 +103,7 @@ const Footer = styled.div`
   }
 `;
 
+//Styles
 
 const Back = styled.div`
 width: 34px;

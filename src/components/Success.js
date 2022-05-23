@@ -12,16 +12,15 @@ export default function Success(props) {
     "https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many",
     { ids: ids, name: props.dataSucess.name, cpf: props.dataSucess.cpf }
   );
-  promisse.then((response) => {
-    console.log("dados enviados com sucesso");
-    console.log(ids);
+  promisse.then(() => {
+    console.log("success");
   });
 
   return (
     <><Back onClick={backPage}> <img src={arrow} alt="voltar"/> </Back>
       <Container>
         <Title>Pedido feito com sucesso!</Title>
-        <MovieInfo>
+        <Infos>
           <h2>Filme e sessão</h2>
           <p>{props.dataSucess.movieInfos.movie.title}</p>
           <p>{`${props.dataSucess.movieInfos.day.date} - ${props.dataSucess.movieInfos.name}`}</p>
@@ -34,7 +33,7 @@ export default function Success(props) {
           <h2>Comprador</h2>
           <p>{`Nome: ${props.dataSucess.name}`}</p>
           <p>{`CPF: ${props.dataSucess.cpf}`}</p>
-        </MovieInfo>
+        </Infos>
 
         <Button>
           <Link to={"/"}>
@@ -45,6 +44,8 @@ export default function Success(props) {
     </>
   );
 }
+
+//Styles
 
 const Container = styled.div`
   display: flex;
@@ -70,13 +71,12 @@ const Title = styled.h1`
   margin-top: 30px;
 `;
 
-const MovieInfo = styled.div`
+const Infos = styled.div`
   h2 {
     font-size: 24px;
     color: #293845;
     line-height: 35px;
     font-weight: 700;
-
     margin-top: 30px;
   }
 
@@ -92,7 +92,6 @@ const Button = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-
   margin-top: 50px;
 
   div {
