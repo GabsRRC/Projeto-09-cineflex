@@ -23,7 +23,7 @@ export default function Home() {
       <Title>Selecione o filme</Title>
       <Movies>
         {images.length === 0
-          ? "Carregando..."
+          ? <div className="loader"></div>
           : images.map((image) => (
               <Image
                 source={image.posterURL}

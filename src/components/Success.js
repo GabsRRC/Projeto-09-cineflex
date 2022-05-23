@@ -18,7 +18,7 @@ export default function Success(props) {
   });
 
   return (
-    <><Back onClick={backPage}> <img src={arrow} alt=""/> </Back>
+    <><Back onClick={backPage}> <img src={arrow} alt="voltar"/> </Back>
       <Container>
         <Title>Pedido feito com sucesso!</Title>
         <MovieInfo>
@@ -36,11 +36,11 @@ export default function Success(props) {
           <p>{`CPF: ${props.dataSucess.cpf}`}</p>
         </MovieInfo>
 
-        <Btn>
+        <Button>
           <Link to={"/"}>
             <div>Voltar pra Home</div>
           </Link>
-        </Btn>
+        </Button>
       </Container>
     </>
   );
@@ -88,7 +88,7 @@ const MovieInfo = styled.div`
   }
 `;
 
-const Btn = styled.div`
+const Button = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;

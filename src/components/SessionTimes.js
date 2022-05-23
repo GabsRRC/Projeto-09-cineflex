@@ -20,12 +20,12 @@ export default function SessionTimes() {
   }, [idFilme]);
 
   if (session.length === 0) {
-    return "Carregando...";
+    return <div className="container"><div className="loader"></div></div>;
   }
 
   return (
     <>
-      <Back onClick={backPage}> <img src={arrow} alt=""/> </Back>
+      <Back onClick={backPage}> <img src={arrow} alt="voltar"/> </Back>
       <Container>
         <Title>Selecione o horário</Title>
       </Container>

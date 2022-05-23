@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function Inputs(props) {
   return (
     <Container>
-      <PersonalData>
+      <Data>
         <div className="title">Nome do comprador:</div>
         <input
           type="text"
@@ -20,7 +20,7 @@ export default function Inputs(props) {
           value={props.inputCPF}
           onChange={(e) => props.setInputCPF(e.target.value)}
         ></input>
-      </PersonalData>
+      </Data>
     </Container>
   );
 }
@@ -38,7 +38,7 @@ const Container = styled.div`
   }
 `;
 
-const PersonalData = styled.div`
+const Data = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 45px 0;
