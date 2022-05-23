@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import arrow from "../img/arrow-undo.svg"
 
 export default function Success(props) {
   const ids = [];
@@ -17,7 +18,7 @@ export default function Success(props) {
   });
 
   return (
-    <>
+    <><Back onClick={backPage}> <img src={arrow} alt=""/> </Back>
       <Container>
         <Title>Pedido feito com sucesso!</Title>
         <MovieInfo>
@@ -111,3 +112,24 @@ const Btn = styled.div`
     text-decoration: none;
   }
 `;
+
+const Back = styled.div`
+width: 34px;
+height: 34px;
+background: #E8833A;
+border-radius: 16px;
+position: absolute;
+top: 16px;
+left: 36px;
+color: #FFFFFF;
+display: flex;
+justify-self: center;
+align-items:center;
+text-align:center;
+padding-bottom: 3px;
+padding-left: 2px;
+`
+
+function backPage(){
+  window.history.back()
+}

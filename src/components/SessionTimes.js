@@ -2,6 +2,7 @@ import axios from "axios";
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import arrow from "../img/arrow-undo.svg"
 
 import Session from "./Session";
 
@@ -24,6 +25,7 @@ export default function SessionTimes() {
 
   return (
     <>
+      <Back onClick={backPage}> <img src={arrow} alt=""/> </Back>
       <Container>
         <Title>Selecione o horário</Title>
       </Container>
@@ -100,3 +102,25 @@ const Footer = styled.div`
     flex-wrap: wrap;
   }
 `;
+
+
+const Back = styled.div`
+width: 34px;
+height: 34px;
+background: #E8833A;
+border-radius: 16px;
+position: absolute;
+top: 16px;
+left: 36px;
+color: #FFFFFF;
+display: flex;
+justify-self: center;
+align-items:center;
+text-align:center;
+padding-bottom: 3px;
+padding-left: 2px;
+`
+
+function backPage(){
+  window.history.back()
+}
